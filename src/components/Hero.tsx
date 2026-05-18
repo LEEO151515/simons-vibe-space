@@ -49,13 +49,23 @@ export default function Hero() {
         transition={{ duration: 0.6, delay: 0.2 }}
         className="relative"
       >
-        <div className="relative z-10 bg-[#FFFAF0] border-4 border-black rounded-[40px] overflow-hidden shadow-[12px_12px_0_0_rgba(0,0,0,1)] aspect-square max-w-md mx-auto">
-          <img 
+        <motion.div 
+          className="relative z-10 bg-[#FFFAF0] border-4 border-black rounded-[40px] overflow-hidden shadow-[12px_12px_0_0_rgba(0,0,0,1)] aspect-square max-w-md mx-auto cursor-pointer"
+          whileHover={{ 
+            scale: 1.05, 
+            rotate: 3,
+            boxShadow: "16px 16px 0 0 rgba(255,105,180,1)"
+          }}
+          transition={{ type: "spring", stiffness: 300, damping: 15 }}
+        >
+          <motion.img 
             src="/avatar.jpg" 
             alt="Avatar" 
             className="w-full h-full object-cover"
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.3 }}
           />
-        </div>
+        </motion.div>
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-8 h-8 bg-pink-400 border-2 border-black rounded-full -translate-y-4 translate-x-4 animate-bounce" />
       </motion.div>

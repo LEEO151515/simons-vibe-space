@@ -84,11 +84,17 @@ export default function App() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[1, 2, 3].map((item) => (
-                  <div key={item} className="bg-white border-4 border-black rounded-[32px] overflow-hidden shadow-[8px_8px_0_0_rgba(0,0,0,1)] group">
+                  <a 
+                    key={item} 
+                    href="http://xhslink.com/o/7MFJTnnDT6D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white border-4 border-black rounded-[32px] overflow-hidden shadow-[8px_8px_0_0_rgba(0,0,0,1)] group cursor-pointer hover:shadow-[12px_12px_0_0_rgba(255,105,180,1)] hover:-translate-y-1 transition-all"
+                  >
                     <div className="aspect-video bg-gray-200 relative overflow-hidden">
-                      <img 
-                        src={`https://images.unsplash.com/photo-${1500000000000 + item * 1000}?auto=format&fit=crop&q=80&w=400`} 
-                        alt="Video" 
+                      <img
+                        src={`https://images.unsplash.com/photo-${1500000000000 + item * 1000}?auto=format&fit=crop&q=80&w=400`}
+                        alt="Video"
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
@@ -101,13 +107,13 @@ export default function App() {
                       </div>
                     </div>
                     <div className="p-4">
-                      <h3 className="font-black truncate mb-2">天啊这个世界真的越来越有趣了！</h3>
+                      <h3 className="font-black truncate mb-2">傻帽和撒勾背着我聊天偷偷聊天💬</h3>
                       <div className="flex items-center gap-4 text-[10px] font-bold text-gray-500 uppercase tracking-widest">
-                        <span>1.5万次播放</span>
-                        <span>477点赞</span>
+                        <span>2500次播放</span>
+                        <span>95点赞</span>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 ))}
               </div>
             </section>
@@ -137,52 +143,159 @@ export default function App() {
         return (
           <motion.div
             key="about"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="pt-32 pb-20 px-6 max-w-4xl mx-auto"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="pt-24 pb-20"
           >
-            <div className="inline-block bg-white border-4 border-black px-8 py-4 shadow-[8px_8px_0_0_rgba(255,105,180,1)] -rotate-1 mb-12">
-              <h1 className="text-5xl font-black">About Me</h1>
-            </div>
-            <div className="bg-white border-4 border-black rounded-[32px] p-10 shadow-[12px_12px_0_0_rgba(0,0,0,1)]">
-              <div className="max-w-none text-gray-700 font-medium leading-relaxed space-y-6">
-                <h2 className="text-3xl font-black text-black">Hello, I'm Simon Moon (西门美月).</h2>
-                <p>
-                  By day, I work as a ToB Product Manager, navigating the complexities of business requirements and user flows. 
-                  By night, I transform into a "Vibe Coder," building interesting little things that spark my curiosity.
-                </p>
-                <p>
-                  I believe that technology shouldn't just be functional; it should have a "soul" – a certain vibe that makes it personal and engaging. 
-                  This portfolio is a collection of my thoughts, my learnings, and my little experiments.
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-                   <div className="bg-blue-100 border-4 border-black p-6 rounded-2xl shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
-                     <h3 className="text-xl font-black mb-4 flex items-center gap-2">
-                       <div className="w-3 h-3 bg-blue-500 rounded-full border border-black" />
-                       Interests
-                     </h3>
-                     <ul className="space-y-2 font-bold text-gray-700">
-                       <li>Digital Content Creation</li>
-                       <li>Human-Computer Interaction</li>
-                       <li>Vibe-coding & Web Dev</li>
-                       <li>Anime & Otaku Culture</li>
-                     </ul>
-                   </div>
-                   <div className="bg-yellow-100 border-4 border-black p-6 rounded-2xl shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
-                     <h3 className="text-xl font-black mb-4 flex items-center gap-2">
-                       <div className="w-3 h-3 bg-yellow-400 rounded-full border border-black" />
-                       Stats
-                     </h3>
-                     <ul className="space-y-2 font-bold text-gray-700">
-                       <li>Product Experience: 2.5 Years</li>
-                       <li>Bilibili Creator: Level 5</li>
-                       <li>Lines Coffeine: Infinite</li>
-                     </ul>
-                   </div>
+            {/* 故事开头 */}
+            <section className="px-6 py-20 max-w-4xl mx-auto text-center">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <span className="text-6xl mb-6 block">👋</span>
+                <h1 className="text-5xl md:text-7xl font-black mb-6">你好，我是</h1>
+                <div className="inline-block bg-pink-400 px-6 py-3 border-4 border-black rotate-1 shadow-[8px_8px_0_0_rgba(0,0,0,1)]">
+                  <span className="text-5xl md:text-6xl font-black">LEEO李晓民</span>
                 </div>
+              </motion.div>
+            </section>
+
+            {/* 时间线故事 */}
+            <section className="max-w-4xl mx-auto px-6">
+              <div className="relative">
+                {/* 时间线竖线 */}
+                <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-black transform md:-translate-x-1/2" />
+                
+                {/* 故事1 - 开端 */}
+                <motion.div 
+                  className="relative mb-16"
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <div className="md:flex items-center">
+                    <div className="md:w-1/2 md:pr-12 md:text-right">
+                      <div className="bg-white border-4 border-black rounded-[24px] p-8 shadow-[8px_8px_0_0_rgba(0,0,0,1)]">
+                        <span className="text-pink-400 font-black text-lg">Chapter 1</span>
+                        <h3 className="text-2xl font-black mt-2 mb-3">故事的起点</h3>
+                        <p className="text-gray-600">
+                          一切从一个好奇的孩子开始。在数字世界的某个角落，我发现了产品经理这个职业——既懂技术，又懂用户，还能创造价值。
+                        </p>
+                      </div>
+                    </div>
+                    <div className="hidden md:flex w-16 h-16 bg-pink-400 border-4 border-black rounded-full items-center justify-center absolute left-1/2 transform -translate-x-1/2 shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
+                      <span className="text-2xl">🌱</span>
+                    </div>
+                    <div className="md:w-1/2" />
+                  </div>
+                </motion.div>
+
+                {/* 故事2 - 成长 */}
+                <motion.div 
+                  className="relative mb-16"
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <div className="md:flex items-center">
+                    <div className="md:w-1/2" />
+                    <div className="hidden md:flex w-16 h-16 bg-blue-400 border-4 border-black rounded-full items-center justify-center absolute left-1/2 transform -translate-x-1/2 shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
+                      <span className="text-2xl">💼</span>
+                    </div>
+                    <div className="md:w-1/2 md:pl-12">
+                      <div className="bg-blue-100 border-4 border-black rounded-[24px] p-8 shadow-[8px_8px_0_0_rgba(0,0,0,1)]">
+                        <span className="text-blue-500 font-black text-lg">Chapter 2</span>
+                        <h3 className="text-2xl font-black mt-2 mb-3">ToB 产品经理的修炼</h3>
+                        <p className="text-gray-600">
+                          白天，我在复杂的业务需求和用户流程中穿行。每一个功能背后，都是对用户痛点的洞察和对商业价值的权衡。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* 故事3 - 副业 */}
+                <motion.div 
+                  className="relative mb-16"
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <div className="md:flex items-center">
+                    <div className="md:w-1/2 md:pr-12 md:text-right">
+                      <div className="bg-yellow-100 border-4 border-black rounded-[24px] p-8 shadow-[8px_8px_0_0_rgba(0,0,0,1)]">
+                        <span className="text-yellow-500 font-black text-lg">Chapter 3</span>
+                        <h3 className="text-2xl font-black mt-2 mb-3">夜间的 Vibe Coder</h3>
+                        <p className="text-gray-600">
+                          当夜幕降临，我变身"Vibe Coder"。不为别的，只为那些突然冒出的好奇想法——用代码把它们变成现实。
+                        </p>
+                      </div>
+                    </div>
+                    <div className="hidden md:flex w-16 h-16 bg-yellow-400 border-4 border-black rounded-full items-center justify-center absolute left-1/2 transform -translate-x-1/2 shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
+                      <span className="text-2xl">🌙</span>
+                    </div>
+                    <div className="md:w-1/2" />
+                  </div>
+                </motion.div>
+
+                {/* 故事4 - B站创作 */}
+                <motion.div 
+                  className="relative mb-16"
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <div className="md:flex items-center">
+                    <div className="md:w-1/2" />
+                    <div className="hidden md:flex w-16 h-16 bg-pink-400 border-4 border-black rounded-full items-center justify-center absolute left-1/2 transform -translate-x-1/2 shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
+                      <span className="text-2xl">🎬</span>
+                    </div>
+                    <div className="md:w-1/2 md:pl-12">
+                      <div className="bg-pink-100 border-4 border-black rounded-[24px] p-8 shadow-[8px_8px_0_0_rgba(0,0,0,1)]">
+                        <span className="text-pink-500 font-black text-lg">Chapter 4</span>
+                        <h3 className="text-2xl font-black mt-2 mb-3">Bilibili 创作者</h3>
+                        <p className="text-gray-600">
+                          文字、视频、弹幕互动...在这里，我和同好们分享生活的碎片。数字世界的连接，有时比现实更温暖。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* 故事结尾 */}
+                <motion.div 
+                  className="relative"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <div className="text-center">
+                    <div className="bg-black text-white border-4 border-black rounded-[32px] p-12 shadow-[12px_12px_0_0_rgba(255,105,180,1)]">
+                      <span className="text-6xl mb-6 block">✨</span>
+                      <h3 className="text-3xl font-black mb-4">我的信念</h3>
+                      <p className="text-xl font-medium max-w-xl mx-auto leading-relaxed">
+                        技术不只需要功能，更需要有"灵魂"——一种让产品变得有个性、有温度的独特气质。
+                      </p>
+                      <div className="mt-8 flex flex-wrap justify-center gap-4">
+                        <span className="bg-pink-400 text-black px-4 py-2 rounded-full font-bold">Digital Creator</span>
+                        <span className="bg-blue-400 text-white px-4 py-2 rounded-full font-bold">PM</span>
+                        <span className="bg-yellow-400 text-black px-4 py-2 rounded-full font-bold">Vibe Coder</span>
+                        <span className="bg-green-400 text-white px-4 py-2 rounded-full font-bold">Otaku</span>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
               </div>
-            </div>
+            </section>
           </motion.div>
         );
       case 'articles':

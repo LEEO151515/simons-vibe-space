@@ -1,5 +1,6 @@
-import { User } from 'lucide-react';
+import { User, Mail } from 'lucide-react';
 import { motion } from 'motion/react';
+import { Link } from 'react-scroll';
 
 export default function Hero() {
   return (
@@ -9,14 +10,14 @@ export default function Hero() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
+        <h1 className="text-5xl md:text-7xl font-black leading-tight mb-4">
           我是<br />
           <span className="bg-pink-400 px-4 py-1 border-2 border-black inline-block -rotate-1 relative z-10">
             LEEO李晓民
           </span>
-          ,
-          <br />
-          A Product Manager,
+          <span className="bg-yellow-400 px-3 py-1 border-2 border-black inline-block rotate-1 relative z-10 ml-2">
+            海外社媒运营
+          </span>
           <br />
           练习时长{' '}
           <span className="bg-blue-500 text-white px-4 py-1 border-2 border-black inline-block rotate-1">
@@ -24,23 +25,31 @@ export default function Hero() {
           </span>
         </h1>
         
-        <div className="space-y-4 text-gray-600 font-medium text-lg max-w-xl mb-10">
-          <p>
-            Bilibili Creator | Digital Writer | Hyperactive Otaku
+        <motion.div 
+          className="text-gray-600 font-medium text-lg max-w-xl mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <p className="text-gray-500 italic text-sm hover:text-blue-500 cursor-default transition-colors duration-300 mb-1">
+            🎓 Graduate of Guangzhou College of Commerce | 🌐 Overseas Social Media Operations | 🎬 Short‑Video Editing | 🤖 AI‑Empowered Explorer
           </p>
-          <p>
-            toB PM by day, Vibe Coder by night. _[ ō_ō ]_
+          <p className="hover:text-pink-500 cursor-default transition-colors duration-300">
+            🎓 广州商学院毕业｜🌐海外社媒运营｜🎬短视频剪辑｜🤖AI赋能探索者
           </p>
-          <p className="text-black font-bold">
-            A PASSIONATE FOOOOOL !!!
-          </p>
-        </div>
-
-        <button className="flex items-center gap-2 bg-black text-white px-8 py-4 rounded-xl font-bold hover:translate-x-1 hover:-translate-y-1 transition-transform relative group">
+        </motion.div>
+        
+        <motion.button 
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="flex items-center gap-2 bg-black text-white px-8 py-4 rounded-xl font-bold hover:translate-x-1 hover:-translate-y-1 transition-transform relative group"
+        >
           <div className="absolute inset-0 bg-black rounded-xl translate-x-2 translate-y-2 -z-10 border border-black group-hover:translate-x-3 group-hover:translate-y-3 transition-transform" />
           <User size={20} />
-          <span>More about me</span>
-        </button>
+          <Link to="about" smooth={true} duration={500}>
+            More about me
+          </Link>
+        </motion.button>
       </motion.div>
 
       <motion.div

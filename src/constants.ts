@@ -10,12 +10,12 @@ export const NAV_ITEMS = [
 export const ARTICLES = [
   {
     id: 1,
-    title: '我有可有可无的网友',
-    date: '2021-08-19',
-    tag: '随笔',
-    tagColor: 'bg-pink-400',
-    description: '关于那些在生命中出现又消失的数字连接。',
-    image: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=400',
+    title: '【子女必看】老人离世前的7个征兆',
+    date: '2025-09-02',
+    tag: 'Youtube',
+    tagColor: 'bg-red-500',
+    description: '了解老人临终前的身体信号，让陪伴不留遗憾。',
+    image: '/youtube-thumb.jpg',
   },
   {
     id: 2,

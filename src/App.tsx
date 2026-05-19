@@ -34,12 +34,12 @@ export default function App() {
             variants={containerVariants}
           >
             <Hero />
-            
+
             {/* Articles Preview */}
-            <section className="px-6 py-20 max-w-7xl mx-auto">
+            <section id="works" className="px-6 py-20 max-w-7xl mx-auto">
               <div className="flex justify-between items-end mb-12">
                 <div className="inline-block bg-white border-4 border-black px-6 py-2 shadow-[4px_4px_0_0_rgba(255,105,180,1)] -rotate-1">
-                  <h2 className="text-4xl font-black italic">Articles</h2>
+                  <h2 className="text-4xl font-black italic">My Works</h2>
                 </div>
                 <button 
                   onClick={() => setActiveTab('articles')}
@@ -50,7 +50,38 @@ export default function App() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {ARTICLES.map((article, i) => (
-                  <ArticleCard key={article.id} article={article} index={i} />
+                  <motion.a
+                    key={article.id}
+                    href="https://youtu.be/YTifF5iZ2N0?si=2yUxKVDbt6ZwaVag"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    whileHover={{ scale: 1.02, y: -5 }}
+                    whileTap={{ scale: 0.98 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    className="group bg-white border-4 border-black rounded-[32px] overflow-hidden shadow-[8px_8px_0_0_rgba(0,0,0,1)] hover:shadow-[12px_12px_0_0_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 transition-all cursor-pointer"
+                  >
+                    <div className="h-48 overflow-hidden border-b-4 border-black">
+                      <img 
+                        alt={article.title} 
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                        src={article.image}
+                      />
+                    </div>
+                    <div className="p-6">
+                      <div className="flex items-center gap-4 mb-3">
+                        <span className={`${article.tagColor} border-2 border-black px-2 py-0.5 rounded text-xs font-bold`}>{article.tag}</span>
+                        <div className="flex items-center gap-1 text-gray-500 text-xs font-medium">
+                          <span>📅</span>
+                          <span>{article.date}</span>
+                        </div>
+                      </div>
+                      <h3 className="text-xl font-black mb-2 line-clamp-1">{article.title}</h3>
+                      <p className="text-gray-600 text-sm font-medium line-clamp-2 leading-relaxed">{article.description}</p>
+                    </div>
+                  </motion.a>
                 ))}
               </div>
             </section>
@@ -72,7 +103,7 @@ export default function App() {
               </div>
             </section>
 
-            {/* Videos Highlight (Optional section based on screenshot) */}
+            {/* Videos Highlight */}
             <section className="px-6 py-20 max-w-7xl mx-auto">
                <div className="flex justify-between items-end mb-12">
                 <div className="inline-block bg-white border-4 border-black px-6 py-2 shadow-[4px_4px_0_0_rgba(59,130,246,1)] rotate-1">
@@ -142,6 +173,7 @@ export default function App() {
       case 'about':
         return (
           <motion.div
+            id="about"
             key="about"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -156,7 +188,16 @@ export default function App() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
-                <span className="text-6xl mb-6 block">👋</span>
+                <motion.span 
+                  className="text-6xl mb-6 block cursor-pointer inline-block"
+                  whileHover={{ rotate: [0, -10, 10, -10, 10, 0] }}
+                  transition={{ duration: 0.5 }}
+                  animate={false}
+                  onClick={() => {}}
+                  whileTap={{ rotate: [0, -15, 15, -15, 15, 0] }}
+                >
+                  👋
+                </motion.span>
                 <h1 className="text-5xl md:text-7xl font-black mb-6">你好，我是</h1>
                 <div className="inline-block bg-pink-400 px-6 py-3 border-4 border-black rotate-1 shadow-[8px_8px_0_0_rgba(0,0,0,1)]">
                   <span className="text-5xl md:text-6xl font-black">LEEO李晓民</span>
@@ -182,9 +223,9 @@ export default function App() {
                     <div className="md:w-1/2 md:pr-12 md:text-right">
                       <div className="bg-white border-4 border-black rounded-[24px] p-8 shadow-[8px_8px_0_0_rgba(0,0,0,1)]">
                         <span className="text-pink-400 font-black text-lg">Chapter 1</span>
-                        <h3 className="text-2xl font-black mt-2 mb-3">故事的起点</h3>
+                        <h3 className="text-2xl font-black mt-2 mb-3">接触社媒的起点</h3>
                         <p className="text-gray-600">
-                          一切从一个好奇的孩子开始。在数字世界的某个角落，我发现了产品经理这个职业——既懂技术，又懂用户，还能创造价值。
+                          发布第一篇小红书，吐槽《为什么说，千万别去亲戚家住太久》获得3w播放量，290个点赞。
                         </p>
                       </div>
                     </div>
@@ -283,7 +324,7 @@ export default function App() {
                       <span className="text-6xl mb-6 block">✨</span>
                       <h3 className="text-3xl font-black mb-4">我的信念</h3>
                       <p className="text-xl font-medium max-w-xl mx-auto leading-relaxed">
-                        技术不只需要功能，更需要有"灵魂"——一种让产品变得有个性、有温度的独特气质。
+                        心即理，信我所行
                       </p>
                       <div className="mt-8 flex flex-wrap justify-center gap-4">
                         <span className="bg-pink-400 text-black px-4 py-2 rounded-full font-bold">Digital Creator</span>

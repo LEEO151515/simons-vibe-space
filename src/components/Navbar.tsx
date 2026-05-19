@@ -8,6 +8,18 @@ interface NavbarProps {
 }
 
 export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
+  const handleNavClick = (itemId: string) => {
+    if (itemId === 'works' && activeTab === 'home') {
+      // 如果在首页，平滑滚动到 works section
+      const worksSection = document.getElementById('works');
+      if (worksSection) {
+        worksSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      setActiveTab(itemId);
+    }
+  };
+
   return (
     <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 px-4 w-full max-w-2xl">
       <div className="bg-white border-2 border-black rounded-full px-6 py-2 shadow-[4px_4px_0_0_rgba(0,0,0,1)] flex items-center justify-between">
@@ -15,7 +27,7 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
           {NAV_ITEMS.map((item) => (
             <li key={item.id}>
               <button
-                onClick={() => setActiveTab(item.id)}
+                onClick={() => handleNavClick(item.id)}
                 className={`flex items-center gap-2 px-3 py-1 rounded-md transition-all relative group h-10`}
               >
                 {activeTab === item.id && (
@@ -36,9 +48,13 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
         
         <div className="h-6 w-[1px] bg-gray-300 mx-4 hidden md:block" />
         
-        <button className="flex items-center justify-center p-2 hover:bg-gray-100 rounded-full transition-colors border border-transparent hover:border-black">
-          <Mail size={18} />
-        </button>
+        <a 
+          href="mailto:2974896992@qq.com"
+          className="flex items-center gap-2 px-4 py-2 bg-black text-white text-sm font-bold rounded-full hover:bg-gray-800 transition-colors border-2 border-black shadow-[2px_2px_0_0_rgba(0,0,0,1)] hover:shadow-[3px_3px_0_0_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5"
+        >
+          <Mail size={16} />
+          <span>联系我</span>
+        </a>
       </div>
     </nav>
   );

@@ -3,7 +3,6 @@ import { Home, User, FileText, Layout, Mail } from 'lucide-react';
 export const NAV_ITEMS = [
   { id: 'home', label: '首页', icon: Home },
   { id: 'about', label: '关于我', icon: User },
-  { id: 'articles', label: '我的文章', icon: FileText },
   { id: 'works', label: '我的作品', icon: Layout },
 ];
 

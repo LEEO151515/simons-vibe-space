@@ -1,7 +1,9 @@
 import { motion } from 'motion/react';
 
 interface ProjectCardProps {
+  key?: string | number;
   project: {
+    id?: number;
     title: string;
     description: string;
     icon: string | null;

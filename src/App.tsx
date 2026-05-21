@@ -37,39 +37,37 @@ export default function App() {
             <Hero />
 
             {/* 工具横幅 */}
-            <section className="py-6 bg-white border-y-4 border-black overflow-hidden flex whitespace-nowrap">
-              <motion.div 
-                animate={{ x: [0, -1000] }}
-                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                className="flex gap-4 items-center pr-4"
-              >
-                {[...Array(5)].map((_, repeatIndex) => (
-                  [
-                    { name: '剪映', color: 'bg-gray-100', icon: '✂️' },
-                    { name: 'Premiere Pro', color: 'bg-indigo-100', icon: '🎬' },
-                    { name: 'Canva', color: 'bg-cyan-100', icon: '🎨' },
-                    { name: 'ChatGPT', color: 'bg-emerald-100', icon: '🤖' },
-                    { name: 'Gemini', color: 'bg-blue-100', icon: '💎' },
-                    { name: '即梦', color: 'bg-purple-100', icon: '🖼️' },
-                    { name: '小云雀', color: 'bg-orange-100', icon: '🐦' },
-                    { name: 'YouTube', color: 'bg-red-100', icon: '▶️' },
-                    { name: 'TikTok', color: 'bg-pink-100', icon: '🎵' },
-                    { name: '小红书', color: 'bg-rose-100', icon: '📕' },
-                    { name: 'Photoshop', color: 'bg-sky-100', icon: '🖌️' },
-                    { name: 'MiniMax', color: 'bg-gray-100', icon: '📝' },
-                  ].map((tool, i) => (
-                    <div 
-                      key={`${repeatIndex}-${i}`}
-                      className={`${tool.color} border-2 border-black px-4 py-2 rounded-lg shadow-[2px_2px_0_0_rgba(0,0,0,1)] flex items-center gap-2 font-bold text-sm`}
-                    >
-                      <div className="w-6 h-6 border border-black rounded-full overflow-hidden flex items-center justify-center bg-white">
-                        {tool.icon}
+            <section className="py-6 bg-white border-y-4 border-black overflow-hidden">
+              <div className="flex animate-marquee whitespace-nowrap">
+                {[...Array(2)].map((_, setIdx) => (
+                  <div key={setIdx} className="flex items-center gap-4 mx-3">
+                    {[
+                      { name: '剪映', color: 'bg-gray-100', icon: '✂️' },
+                      { name: 'Premiere Pro', color: 'bg-indigo-100', icon: '🎬' },
+                      { name: 'Canva', color: 'bg-cyan-100', icon: '🎨' },
+                      { name: 'ChatGPT', color: 'bg-emerald-100', icon: '🤖' },
+                      { name: 'Gemini', color: 'bg-blue-100', icon: '💎' },
+                      { name: '即梦', color: 'bg-purple-100', icon: '🖼️' },
+                      { name: '小云雀', color: 'bg-orange-100', icon: '🐦' },
+                      { name: 'YouTube', color: 'bg-red-100', icon: '▶️' },
+                      { name: 'TikTok', color: 'bg-pink-100', icon: '🎵' },
+                      { name: '小红书', color: 'bg-rose-100', icon: '📕' },
+                      { name: 'Photoshop', color: 'bg-sky-100', icon: '🖌️' },
+                      { name: 'MiniMax', color: 'bg-gray-100', icon: '📝' },
+                    ].map((tool, i) => (
+                      <div 
+                        key={`${setIdx}-${i}`}
+                        className={`${tool.color} border-2 border-black px-4 py-2 rounded-lg shadow-[2px_2px_0_0_rgba(0,0,0,1)] flex items-center gap-2 font-bold text-sm flex-shrink-0`}
+                      >
+                        <div className="w-6 h-6 border border-black rounded-full overflow-hidden flex items-center justify-center bg-white">
+                          {tool.icon}
+                        </div>
+                        <span>{tool.name}</span>
                       </div>
-                      <span>{tool.name}</span>
-                    </div>
-                  ))
+                    ))}
+                  </div>
                 ))}
-              </motion.div>
+              </div>
             </section>
 
             {/* Videos Highlight */}
@@ -184,7 +182,7 @@ export default function App() {
               </div>
               <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
                 {WORKS.map((work, i) => (
-                  <ProjectCard key={work.id} project={work} index={i} />
+                  <ProjectCard key={`work-${work.id}`} project={work} index={i} />
                 ))}
               </div>
             </section>
@@ -399,7 +397,7 @@ export default function App() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Using same data but repeating for placeholder feel if needed */}
               {[...ARTICLES, ...ARTICLES].map((article, i) => (
-                <ArticleCard key={i} article={article} index={i} />
+                <ArticleCard key={`article-${article.id}-${i}`} article={article} index={i} />
               ))}
             </div>
           </motion.div>
@@ -418,7 +416,7 @@ export default function App() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {WORKS.map((work, i) => (
-                <ProjectCard key={work.id} project={work} index={i} />
+                <ProjectCard key={`works-page-${work.id}`} project={work} index={i} />
               ))}
               <ProjectCard 
                 project={{ 

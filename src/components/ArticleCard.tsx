@@ -2,7 +2,9 @@ import { Calendar, Tag } from 'lucide-react';
 import { motion } from 'motion/react';
 
 interface ArticleCardProps {
+  key?: string | number;
   article: {
+    id?: number;
     title: string;
     date: string;
     tag: string;

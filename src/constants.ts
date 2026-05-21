@@ -1,5 +1,6 @@
 import { Home, User, FileText, Layout, Mail, Lightbulb } from 'lucide-react';
 
+// Navigation items
 export const NAV_ITEMS = [
   { id: 'home', label: '首页', icon: Home },
   { id: 'works', label: '我的作品', icon: Layout },

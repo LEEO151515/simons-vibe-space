@@ -1,9 +1,10 @@
-import { Home, User, FileText, Layout, Mail } from 'lucide-react';
+import { Home, User, FileText, Layout, Mail, Lightbulb } from 'lucide-react';
 
 export const NAV_ITEMS = [
   { id: 'home', label: '首页', icon: Home },
-  { id: 'about', label: '关于我', icon: User },
   { id: 'works', label: '我的作品', icon: Layout },
+  { id: 'about', label: '关于我', icon: User },
+  { id: 'tips', label: '干货分享', icon: Lightbulb },
 ];
 
 export const ARTICLES = [

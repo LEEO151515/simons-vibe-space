@@ -7,6 +7,7 @@ import ArticleCard from './components/ArticleCard';
 import ProjectCard from './components/ProjectCard';
 import PartnerMarquee from './components/PartnerMarquee';
 import Footer from './components/Footer';
+import Tips from './components/Tips';
 import { ARTICLES, WORKS } from './constants';
 
 export default function App() {
@@ -35,72 +36,40 @@ export default function App() {
           >
             <Hero />
 
-            {/* Articles Preview */}
-            <section id="works" className="px-6 py-20 max-w-7xl mx-auto">
-              <div className="flex justify-between items-end mb-12">
-                <div className="inline-block bg-white border-4 border-black px-6 py-2 shadow-[4px_4px_0_0_rgba(255,105,180,1)] -rotate-1">
-                  <h2 className="text-4xl font-black italic">My Works</h2>
-                </div>
-                <button 
-                  onClick={() => setActiveTab('articles')}
-                  className="flex items-center gap-2 font-black group hover:translate-x-1 transition-transform"
-                >
-                  Browse all articles <ArrowRight size={20} />
-                </button>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {ARTICLES.map((article, i) => (
-                  <motion.a
-                    key={article.id}
-                    href="https://youtu.be/YTifF5iZ2N0?si=2yUxKVDbt6ZwaVag"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    whileHover={{ scale: 1.02, y: -5 }}
-                    whileTap={{ scale: 0.98 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                    className="group bg-white border-4 border-black rounded-[32px] overflow-hidden shadow-[8px_8px_0_0_rgba(0,0,0,1)] hover:shadow-[12px_12px_0_0_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 transition-all cursor-pointer"
-                  >
-                    <div className="h-48 overflow-hidden border-b-4 border-black">
-                      <img 
-                        alt={article.title} 
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                        src={article.image}
-                      />
-                    </div>
-                    <div className="p-6">
-                      <div className="flex items-center gap-4 mb-3">
-                        <span className={`${article.tagColor} border-2 border-black px-2 py-0.5 rounded text-xs font-bold`}>{article.tag}</span>
-                        <div className="flex items-center gap-1 text-gray-500 text-xs font-medium">
-                          <span>📅</span>
-                          <span>{article.date}</span>
-                        </div>
+            {/* 工具横幅 */}
+            <section className="py-6 bg-white border-y-4 border-black overflow-hidden flex whitespace-nowrap">
+              <motion.div 
+                animate={{ x: [0, -1000] }}
+                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                className="flex gap-4 items-center pr-4"
+              >
+                {[...Array(5)].map((_, repeatIndex) => (
+                  [
+                    { name: '剪映', color: 'bg-gray-100', icon: '✂️' },
+                    { name: 'Premiere Pro', color: 'bg-indigo-100', icon: '🎬' },
+                    { name: 'Canva', color: 'bg-cyan-100', icon: '🎨' },
+                    { name: 'ChatGPT', color: 'bg-emerald-100', icon: '🤖' },
+                    { name: 'Gemini', color: 'bg-blue-100', icon: '💎' },
+                    { name: '即梦', color: 'bg-purple-100', icon: '🖼️' },
+                    { name: '小云雀', color: 'bg-orange-100', icon: '🐦' },
+                    { name: 'YouTube', color: 'bg-red-100', icon: '▶️' },
+                    { name: 'TikTok', color: 'bg-pink-100', icon: '🎵' },
+                    { name: '小红书', color: 'bg-rose-100', icon: '📕' },
+                    { name: 'Photoshop', color: 'bg-sky-100', icon: '🖌️' },
+                    { name: 'MiniMax', color: 'bg-gray-100', icon: '📝' },
+                  ].map((tool, i) => (
+                    <div 
+                      key={`${repeatIndex}-${i}`}
+                      className={`${tool.color} border-2 border-black px-4 py-2 rounded-lg shadow-[2px_2px_0_0_rgba(0,0,0,1)] flex items-center gap-2 font-bold text-sm`}
+                    >
+                      <div className="w-6 h-6 border border-black rounded-full overflow-hidden flex items-center justify-center bg-white">
+                        {tool.icon}
                       </div>
-                      <h3 className="text-xl font-black mb-2 line-clamp-1">{article.title}</h3>
-                      <p className="text-gray-600 text-sm font-medium line-clamp-2 leading-relaxed">{article.description}</p>
+                      <span>{tool.name}</span>
                     </div>
-                  </motion.a>
+                  ))
                 ))}
-              </div>
-            </section>
-
-            {/* Creations Section */}
-            <section className="px-6 py-20 bg-white/50 border-y-4 border-black">
-              <div className="max-w-7xl mx-auto text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-black mb-6">
-                  Some of My <span className="bg-pink-400 px-4 py-1 border-2 border-black inline-block -rotate-2">Vibe-coded Creations</span>
-                </h2>
-                <p className="text-gray-500 font-bold max-w-xl mx-auto">
-                  Code byproducts generated during late-night vibe coding sessions. Imperfect, functional, and always interesting.
-                </p>
-              </div>
-              <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-                {WORKS.map((work, i) => (
-                  <ProjectCard key={work.id} project={work} index={i} />
-                ))}
-              </div>
+              </motion.div>
             </section>
 
             {/* Videos Highlight */}
@@ -113,8 +82,37 @@ export default function App() {
                   Watch all videos <ArrowRight size={20} />
                 </button>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {[1, 2, 3].map((item) => (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">                {/* 第一个视频卡片 */}
+                <a 
+                  href="https://youtu.be/YTifF5iZ2N0?si=0eiyJ8nYHCH5JihN"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white border-4 border-black rounded-[32px] overflow-hidden shadow-[8px_8px_0_0_rgba(0,0,0,1)] group cursor-pointer hover:shadow-[12px_12px_0_0_rgba(255,105,180,1)] hover:-translate-y-1 transition-all"
+                >
+                  <div className="aspect-video bg-gray-200 relative overflow-hidden">
+                    <img
+                      src="https://images.unsplash.com/photo-1500000001000?auto=format&fit=crop&q=80&w=400"
+                      alt="Video"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                       <div className="w-16 h-16 bg-white rounded-full border-2 border-black flex items-center justify-center shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
+                          <Play fill="black" />
+                       </div>
+                    </div>
+
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-black truncate mb-2">【子女必看】老人离世前的7个征兆</h3>
+                    <div className="flex items-center gap-4 text-[10px] font-bold text-gray-500 uppercase tracking-widest">
+                      <span>12w次播放</span>
+                      <span>2646点赞</span>
+                    </div>
+                  </div>
+                </a>
+                
+                {/* 其他视频卡片 */}
+                {[2, 3].map((item) => (
                   <a 
                     key={item} 
                     href="http://xhslink.com/o/7MFJTnnDT6D"
@@ -133,9 +131,7 @@ export default function App() {
                             <Play fill="black" />
                          </div>
                       </div>
-                      <div className="absolute bottom-2 right-2 bg-black text-white text-[10px] font-bold px-2 py-1 rounded">
-                        0{item}:2{item}
-                      </div>
+
                     </div>
                     <div className="p-4">
                       <h3 className="font-black truncate mb-2">傻帽和撒勾背着我聊天偷偷聊天💬</h3>
@@ -145,6 +141,50 @@ export default function App() {
                       </div>
                     </div>
                   </a>
+                ))}
+                {/* 第四张视频卡片 */}
+                <a 
+                  href="https://youtu.be/YTifF5iZ2N0?si=0eiyJ8nYHCH5JihN"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white border-4 border-black rounded-[32px] overflow-hidden shadow-[8px_8px_0_0_rgba(0,0,0,1)] group cursor-pointer hover:shadow-[12px_12px_0_0_rgba(255,105,180,1)] hover:-translate-y-1 transition-all"
+                >
+                  <div className="aspect-video bg-gray-200 relative overflow-hidden">
+                    <img
+                      src="https://images.unsplash.com/photo-1500000003000?auto=format&fit=crop&q=80&w=400"
+                      alt="Video"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                       <div className="w-16 h-16 bg-white rounded-full border-2 border-black flex items-center justify-center shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
+                          <Play fill="black" />
+                       </div>
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-black truncate mb-2">AI工具让效率翻倍的秘密🚀</h3>
+                    <div className="flex items-center gap-4 text-[10px] font-bold text-gray-500 uppercase tracking-widest">
+                      <span>5w次播放</span>
+                      <span>1800点赞</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </section>
+
+            {/* Creations Section */}
+            <section className="px-6 py-20 bg-white/50 border-y-4 border-black">
+              <div className="max-w-7xl mx-auto text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-black mb-6">
+                  Some of My <span className="bg-pink-400 px-4 py-1 border-2 border-black inline-block -rotate-2">Vibe-coded Creations</span>
+                </h2>
+                <p className="text-gray-500 font-bold max-w-xl mx-auto">
+                  Code byproducts generated during late-night vibe coding sessions. Imperfect, functional, and always interesting.
+                </p>
+              </div>
+              <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                {WORKS.map((work, i) => (
+                  <ProjectCard key={work.id} project={work} index={i} />
                 ))}
               </div>
             </section>
@@ -169,6 +209,10 @@ export default function App() {
                </motion.div>
             </section>
           </motion.div>
+        );
+      case 'tips':
+        return (
+          <Tips />
         );
       case 'about':
         return (
@@ -203,6 +247,7 @@ export default function App() {
                   <span className="text-5xl md:text-6xl font-black">LEEO李晓民</span>
                 </div>
               </motion.div>
+
             </section>
 
             {/* 时间线故事 */}
@@ -247,14 +292,14 @@ export default function App() {
                   <div className="md:flex items-center">
                     <div className="md:w-1/2" />
                     <div className="hidden md:flex w-16 h-16 bg-blue-400 border-4 border-black rounded-full items-center justify-center absolute left-1/2 transform -translate-x-1/2 shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
-                      <span className="text-2xl">💼</span>
+                      <span className="text-2xl">🎬</span>
                     </div>
                     <div className="md:w-1/2 md:pl-12">
                       <div className="bg-blue-100 border-4 border-black rounded-[24px] p-8 shadow-[8px_8px_0_0_rgba(0,0,0,1)]">
                         <span className="text-blue-500 font-black text-lg">Chapter 2</span>
-                        <h3 className="text-2xl font-black mt-2 mb-3">ToB 产品经理的修炼</h3>
+                        <h3 className="text-2xl font-black mt-2 mb-3">自学剪辑</h3>
                         <p className="text-gray-600">
-                          白天，我在复杂的业务需求和用户流程中穿行。每一个功能背后，都是对用户痛点的洞察和对商业价值的权衡。
+                          从剪映到PR，一步步摸索视频剪辑。从最简单的转场到复杂的调色，每一个作品都是成长的见证。
                         </p>
                       </div>
                     </div>
@@ -273,9 +318,9 @@ export default function App() {
                     <div className="md:w-1/2 md:pr-12 md:text-right">
                       <div className="bg-yellow-100 border-4 border-black rounded-[24px] p-8 shadow-[8px_8px_0_0_rgba(0,0,0,1)]">
                         <span className="text-yellow-500 font-black text-lg">Chapter 3</span>
-                        <h3 className="text-2xl font-black mt-2 mb-3">夜间的 Vibe Coder</h3>
+                        <h3 className="text-2xl font-black mt-2 mb-3">加入看见文化公司</h3>
                         <p className="text-gray-600">
-                          当夜幕降临，我变身"Vibe Coder"。不为别的，只为那些突然冒出的好奇想法——用代码把它们变成现实。
+                          剪辑和运营赵越教授，YouTube达到1w粉丝，TK 1.2w粉丝，一个多月过YPP，推动到独立站小黄车销课，累计业绩达30w转化。
                         </p>
                       </div>
                     </div>
@@ -302,9 +347,9 @@ export default function App() {
                     <div className="md:w-1/2 md:pl-12">
                       <div className="bg-pink-100 border-4 border-black rounded-[24px] p-8 shadow-[8px_8px_0_0_rgba(0,0,0,1)]">
                         <span className="text-pink-500 font-black text-lg">Chapter 4</span>
-                        <h3 className="text-2xl font-black mt-2 mb-3">Bilibili 创作者</h3>
+                        <h3 className="text-2xl font-black mt-2 mb-3">AI赋能探索者</h3>
                         <p className="text-gray-600">
-                          文字、视频、弹幕互动...在这里，我和同好们分享生活的碎片。数字世界的连接，有时比现实更温暖。
+                          单条AI广告视频突破80w播放量，1400的点赞。用AI工具赋能内容创作，探索无限可能。
                         </p>
                       </div>
                     </div>

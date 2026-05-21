@@ -9,15 +9,7 @@ interface NavbarProps {
 
 export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
   const handleNavClick = (itemId: string) => {
-    if (itemId === 'works' && activeTab === 'home') {
-      // 如果在首页，平滑滚动到 works section
-      const worksSection = document.getElementById('works');
-      if (worksSection) {
-        worksSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    } else {
-      setActiveTab(itemId);
-    }
+    setActiveTab(itemId);
   };
 
   return (

@@ -12,7 +12,7 @@ import { ARTICLES, WORKS } from './constants';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('home');
-
+ 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

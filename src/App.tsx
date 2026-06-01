@@ -89,7 +89,7 @@ export default function App() {
                 >
                   <div className="aspect-video bg-gray-200 relative overflow-hidden">
                     <img
-                      src="https://images.unsplash.com/photo-1500000001000?auto=format&fit=crop&q=80&w=400"
+                      src="https://img.youtube.com/vi/YTifF5iZ2N0/maxresdefault.jpg"
                       alt="Video"
                       className="w-full h-full object-cover"
                     />
@@ -98,7 +98,6 @@ export default function App() {
                           <Play fill="black" />
                        </div>
                     </div>
-
                   </div>
                   <div className="p-4">
                     <h3 className="font-black truncate mb-2">【子女必看】老人离世前的7个征兆</h3>
@@ -118,7 +117,7 @@ export default function App() {
                 >
                   <div className="aspect-video bg-gray-200 relative overflow-hidden">
                     <img
-                      src="https://images.unsplash.com/photo-1500000002000?auto=format&fit=crop&q=80&w=400"
+                      src="https://img.youtube.com/vi/pix5sYJIdn0/maxresdefault.jpg"
                       alt="Video"
                       className="w-full h-full object-cover"
                     />
@@ -145,7 +144,7 @@ export default function App() {
                 >
                   <div className="aspect-video bg-gray-200 relative overflow-hidden">
                     <img
-                      src="https://images.unsplash.com/photo-1500000004000?auto=format&fit=crop&q=80&w=400"
+                      src="https://img.youtube.com/vi/c-kz9kUFW6M/maxresdefault.jpg"
                       alt="Video"
                       className="w-full h-full object-cover"
                     />

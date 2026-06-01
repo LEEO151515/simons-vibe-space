@@ -109,37 +109,60 @@ export default function App() {
                   </div>
                 </a>
                 
-                {/* 其他视频卡片 */}
-                {[2, 3].map((item) => (
-                  <a 
-                    key={item} 
-                    href="http://xhslink.com/o/7MFJTnnDT6D"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-white border-4 border-black rounded-[32px] overflow-hidden shadow-[8px_8px_0_0_rgba(0,0,0,1)] group cursor-pointer hover:shadow-[12px_12px_0_0_rgba(255,105,180,1)] hover:-translate-y-1 transition-all"
-                  >
-                    <div className="aspect-video bg-gray-200 relative overflow-hidden">
-                      <img
-                        src={`https://images.unsplash.com/photo-${1500000000000 + item * 1000}?auto=format&fit=crop&q=80&w=400`}
-                        alt="Video"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                         <div className="w-16 h-16 bg-white rounded-full border-2 border-black flex items-center justify-center shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
-                            <Play fill="black" />
-                         </div>
-                      </div>
-
+                {/* 第二个视频卡片 */}
+                <a 
+                  href="https://youtube.com/shorts/pix5sYJIdn0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white border-4 border-black rounded-[32px] overflow-hidden shadow-[8px_8px_0_0_rgba(0,0,0,1)] group cursor-pointer hover:shadow-[12px_12px_0_0_rgba(255,105,180,1)] hover:-translate-y-1 transition-all"
+                >
+                  <div className="aspect-video bg-gray-200 relative overflow-hidden">
+                    <img
+                      src="https://images.unsplash.com/photo-1500000002000?auto=format&fit=crop&q=80&w=400"
+                      alt="Video"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                       <div className="w-16 h-16 bg-white rounded-full border-2 border-black flex items-center justify-center shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
+                          <Play fill="black" />
+                       </div>
                     </div>
-                    <div className="p-4">
-                      <h3 className="font-black truncate mb-2">傻帽和撒勾背着我聊天偷偷聊天💬</h3>
-                      <div className="flex items-center gap-4 text-[10px] font-bold text-gray-500 uppercase tracking-widest">
-                        <span>2500次播放</span>
-                        <span>95点赞</span>
-                      </div>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-black truncate mb-2">每个人都是有自己的定数在，一定不要轻易浪费。</h3>
+                    <div className="flex items-center gap-4 text-[10px] font-bold text-gray-500 uppercase tracking-widest">
+                      <span>19w次播放</span>
+                      <span>3427点赞</span>
                     </div>
-                  </a>
-                ))}
+                  </div>
+                </a>
+                {/* 第三个视频卡片 */}
+                <a 
+                  href="https://youtube.com/shorts/c-kz9kUFW6M?si=b9b1youUYK-8gdZs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white border-4 border-black rounded-[32px] overflow-hidden shadow-[8px_8px_0_0_rgba(0,0,0,1)] group cursor-pointer hover:shadow-[12px_12px_0_0_rgba(255,105,180,1)] hover:-translate-y-1 transition-all"
+                >
+                  <div className="aspect-video bg-gray-200 relative overflow-hidden">
+                    <img
+                      src="https://images.unsplash.com/photo-1500000004000?auto=format&fit=crop&q=80&w=400"
+                      alt="Video"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                       <div className="w-16 h-16 bg-white rounded-full border-2 border-black flex items-center justify-center shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
+                          <Play fill="black" />
+                       </div>
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-black truncate mb-2">傻帽和撒勾背着我聊天偷偷聊天💬</h3>
+                    <div className="flex items-center gap-4 text-[10px] font-bold text-gray-500 uppercase tracking-widest">
+                      <span>20w次播放</span>
+                      <span>2363点赞</span>
+                    </div>
+                  </div>
+                </a>
                 {/* 第四张视频卡片 */}
                 <a 
                   href="https://youtu.be/YTifF5iZ2N0?si=0eiyJ8nYHCH5JihN"

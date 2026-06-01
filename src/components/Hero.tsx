@@ -68,7 +68,7 @@ export default function Hero() {
           transition={{ type: "spring", stiffness: 300, damping: 15 }}
         >
           <motion.img 
-            src="/avatar.jpg" 
+            src="/avatar-new.jpg" 
             alt="Avatar" 
             className="w-full h-full object-cover"
             whileHover={{ scale: 1.1 }}

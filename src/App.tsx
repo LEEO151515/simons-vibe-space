@@ -129,7 +129,7 @@ export default function App() {
                     </div>
                   </div>
                   <div className="p-4">
-                    <h3 className="font-black truncate mb-2">每个人都是有自己的定数在，一定不要轻易浪费。</h3>
+                    <h3 className="font-black truncate mb-2">每个人都是有自己的定数在，一定不要轻易浪费</h3>
                     <div className="flex items-center gap-4 text-[10px] font-bold text-gray-500 uppercase tracking-widest">
                       <span>19w次播放</span>
                       <span>3427点赞</span>
@@ -156,7 +156,7 @@ export default function App() {
                     </div>
                   </div>
                   <div className="p-4">
-                    <h3 className="font-black truncate mb-2">傻帽和撒勾背着我聊天偷偷聊天💬</h3>
+                    <h3 className="font-black truncate mb-2">做人一定要学会变通</h3>
                     <div className="flex items-center gap-4 text-[10px] font-bold text-gray-500 uppercase tracking-widest">
                       <span>20w次播放</span>
                       <span>2363点赞</span>

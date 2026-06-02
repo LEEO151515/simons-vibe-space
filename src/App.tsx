@@ -70,127 +70,7 @@ export default function App() {
               </div>
             </section>
 
-            {/* Videos Highlight */}
-            <section className="px-6 py-20 max-w-7xl mx-auto">
-               <div className="flex justify-between items-end mb-12">
-                <div className="inline-block bg-white border-4 border-black px-6 py-2 shadow-[4px_4px_0_0_rgba(59,130,246,1)] rotate-1">
-                  <h2 className="text-4xl font-black italic">Videos</h2>
-                </div>
-                <button className="flex items-center gap-2 font-black group hover:translate-x-1 transition-transform">
-                  Watch all videos <ArrowRight size={20} />
-                </button>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">                {/* 第一个视频卡片 */}
-                <a 
-                  href="https://youtu.be/YTifF5iZ2N0?si=0eiyJ8nYHCH5JihN"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white border-4 border-black rounded-[32px] overflow-hidden shadow-[8px_8px_0_0_rgba(0,0,0,1)] group cursor-pointer hover:shadow-[12px_12px_0_0_rgba(255,105,180,1)] hover:-translate-y-1 transition-all"
-                >
-                  <div className="aspect-video bg-gray-200 relative overflow-hidden">
-                    <img
-                      src="https://img.youtube.com/vi/YTifF5iZ2N0/maxresdefault.jpg"
-                      alt="Video"
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                       <div className="w-16 h-16 bg-white rounded-full border-2 border-black flex items-center justify-center shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
-                          <Play fill="black" />
-                       </div>
-                    </div>
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-black truncate mb-2">【子女必看】老人离世前的7个征兆</h3>
-                    <div className="flex items-center gap-4 text-[10px] font-bold text-gray-500 uppercase tracking-widest">
-                      <span>12w次播放</span>
-                      <span>2646点赞</span>
-                    </div>
-                  </div>
-                </a>
-                
-                {/* 第二个视频卡片 */}
-                <a 
-                  href="https://youtube.com/shorts/pix5sYJIdn0"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white border-4 border-black rounded-[32px] overflow-hidden shadow-[8px_8px_0_0_rgba(0,0,0,1)] group cursor-pointer hover:shadow-[12px_12px_0_0_rgba(255,105,180,1)] hover:-translate-y-1 transition-all"
-                >
-                  <div className="aspect-video bg-gray-200 relative overflow-hidden">
-                    <img
-                      src="https://img.youtube.com/vi/pix5sYJIdn0/maxresdefault.jpg"
-                      alt="Video"
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                       <div className="w-16 h-16 bg-white rounded-full border-2 border-black flex items-center justify-center shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
-                          <Play fill="black" />
-                       </div>
-                    </div>
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-black truncate mb-2">每个人都是有自己的定数在，一定不要轻易浪费</h3>
-                    <div className="flex items-center gap-4 text-[10px] font-bold text-gray-500 uppercase tracking-widest">
-                      <span>19w次播放</span>
-                      <span>3427点赞</span>
-                    </div>
-                  </div>
-                </a>
-                {/* 第三个视频卡片 */}
-                <a 
-                  href="https://youtube.com/shorts/c-kz9kUFW6M?si=b9b1youUYK-8gdZs"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white border-4 border-black rounded-[32px] overflow-hidden shadow-[8px_8px_0_0_rgba(0,0,0,1)] group cursor-pointer hover:shadow-[12px_12px_0_0_rgba(255,105,180,1)] hover:-translate-y-1 transition-all"
-                >
-                  <div className="aspect-video bg-gray-200 relative overflow-hidden">
-                    <img
-                      src="https://img.youtube.com/vi/c-kz9kUFW6M/maxresdefault.jpg"
-                      alt="Video"
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                       <div className="w-16 h-16 bg-white rounded-full border-2 border-black flex items-center justify-center shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
-                          <Play fill="black" />
-                       </div>
-                    </div>
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-black truncate mb-2">做人一定要学会变通</h3>
-                    <div className="flex items-center gap-4 text-[10px] font-bold text-gray-500 uppercase tracking-widest">
-                      <span>20w次播放</span>
-                      <span>2363点赞</span>
-                    </div>
-                  </div>
-                </a>
-                {/* 第四张视频卡片 */}
-                <a 
-                  href="https://youtu.be/YTifF5iZ2N0?si=0eiyJ8nYHCH5JihN"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white border-4 border-black rounded-[32px] overflow-hidden shadow-[8px_8px_0_0_rgba(0,0,0,1)] group cursor-pointer hover:shadow-[12px_12px_0_0_rgba(255,105,180,1)] hover:-translate-y-1 transition-all"
-                >
-                  <div className="aspect-video bg-gray-200 relative overflow-hidden">
-                    <img
-                      src="https://images.unsplash.com/photo-1500000003000?auto=format&fit=crop&q=80&w=400"
-                      alt="Video"
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                       <div className="w-16 h-16 bg-white rounded-full border-2 border-black flex items-center justify-center shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
-                          <Play fill="black" />
-                       </div>
-                    </div>
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-black truncate mb-2">AI工具让效率翻倍的秘密🚀</h3>
-                    <div className="flex items-center gap-4 text-[10px] font-bold text-gray-500 uppercase tracking-widest">
-                      <span>5w次播放</span>
-                      <span>1800点赞</span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </section>
+
 
             {/* Creations Section */}
             <section className="px-6 py-20 bg-white/50 border-y-4 border-black">
@@ -434,30 +314,165 @@ export default function App() {
             className="pt-32 pb-20 px-6 max-w-7xl mx-auto"
           >
              <div className="inline-block bg-white border-4 border-black px-8 py-4 shadow-[8px_8px_0_0_rgba(96,165,250,1)] -rotate-1 mb-12">
-              <h1 className="text-5xl font-black">Creative Creations</h1>
+              <h1 className="text-5xl font-black">我的作品</h1>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {WORKS.map((work, i) => (
-                <ProjectCard key={`works-page-${work.id}`} project={work} index={i} />
-              ))}
-              <ProjectCard 
-                project={{ 
-                  title: "Vibe Player", 
-                  description: "A music player that changes colors based on the album art vibe.",
-                  icon: "🎵",
-                  iconBg: "bg-pink-300"
-                }} 
-                index={3} 
-              />
-              <ProjectCard 
-                project={{ 
-                  title: "O-T-A-K-U Wiki", 
-                  description: "A curated list of my favorite anime and their impact on my life.",
-                  icon: "🕹️",
-                  iconBg: "bg-green-300"
-                }} 
-                index={4} 
-              />
+
+            {/* 视频卡片区域 */}
+            <div className="mb-16">
+              <h2 className="text-2xl font-black mb-6 flex items-center gap-2">
+                <span className="bg-red-500 text-white px-3 py-1 border-2 border-black">▶</span>
+                热门视频
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Video 1 */}
+                <a 
+                  href="https://youtu.be/YTifF5iZ2N0?si=0eiyJ8nYHCH5JihN" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] hover:shadow-[8px_8px_0_0_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all group"
+                >
+                  <div className="relative aspect-video overflow-hidden">
+                    <img 
+                      src="https://img.youtube.com/vi/YTifF5iZ2N0/maxresdefault.jpg" 
+                      alt="视频封面"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                    />
+                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center border-4 border-white">
+                        <Play className="w-8 h-8 text-white ml-1" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-black text-lg mb-2">【子女必看】老人离世前的7个征兆</h3>
+                    <div className="flex items-center gap-4 text-sm text-gray-600">
+                      <span className="flex items-center gap-1">
+                        <Play className="w-4 h-4" /> 12w次播放
+                      </span>
+                      <span>👍 2646</span>
+                    </div>
+                  </div>
+                </a>
+
+                {/* Video 2 */}
+                <a 
+                  href="https://youtube.com/shorts/pix5sYJIdn0" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] hover:shadow-[8px_8px_0_0_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all group"
+                >
+                  <div className="relative aspect-video overflow-hidden">
+                    <img 
+                      src="https://img.youtube.com/vi/pix5sYJIdn0/maxresdefault.jpg" 
+                      alt="视频封面"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                    />
+                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center border-4 border-white">
+                        <Play className="w-8 h-8 text-white ml-1" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-black text-lg mb-2">每个人都是有自己的定数在，一定不要轻易浪费</h3>
+                    <div className="flex items-center gap-4 text-sm text-gray-600">
+                      <span className="flex items-center gap-1">
+                        <Play className="w-4 h-4" /> 19w次播放
+                      </span>
+                      <span>👍 3427</span>
+                    </div>
+                  </div>
+                </a>
+
+                {/* Video 3 */}
+                <a 
+                  href="https://youtube.com/shorts/c-kz9kUFW6M" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] hover:shadow-[8px_8px_0_0_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all group"
+                >
+                  <div className="relative aspect-video overflow-hidden">
+                    <img 
+                      src="https://img.youtube.com/vi/c-kz9kUFW6M/maxresdefault.jpg" 
+                      alt="视频封面"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                    />
+                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center border-4 border-white">
+                        <Play className="w-8 h-8 text-white ml-1" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-black text-lg mb-2">做人一定要学会变通</h3>
+                    <div className="flex items-center gap-4 text-sm text-gray-600">
+                      <span className="flex items-center gap-1">
+                        <Play className="w-4 h-4" /> 20w次播放
+                      </span>
+                      <span>👍 2363</span>
+                    </div>
+                  </div>
+                </a>
+
+                {/* Video 4 */}
+                <a 
+                  href="https://youtu.be/YTifF5iZ2N0" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] hover:shadow-[8px_8px_0_0_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all group"
+                >
+                  <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-purple-500 to-pink-500">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <span className="text-6xl">🚀</span>
+                    </div>
+                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center border-4 border-white">
+                        <Play className="w-8 h-8 text-white ml-1" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-black text-lg mb-2">AI工具让效率翻倍的秘密🚀</h3>
+                    <div className="flex items-center gap-4 text-sm text-gray-600">
+                      <span className="flex items-center gap-1">
+                        <Play className="w-4 h-4" /> 5w次播放
+                      </span>
+                      <span>👍 1800</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            {/* 项目卡片区域 */}
+            <div>
+              <h2 className="text-2xl font-black mb-6 flex items-center gap-2">
+                <span className="bg-blue-400 text-white px-3 py-1 border-2 border-black">💻</span>
+                开发项目
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {WORKS.map((work, i) => (
+                  <ProjectCard key={`works-page-${work.id}`} project={work} index={i} />
+                ))}
+                <ProjectCard 
+                  project={{ 
+                    title: "Vibe Player", 
+                    description: "A music player that changes colors based on the album art vibe.",
+                    icon: "🎵",
+                    iconBg: "bg-pink-300"
+                  }} 
+                  index={3} 
+                />
+                <ProjectCard 
+                  project={{ 
+                    title: "O-T-A-K-U Wiki", 
+                    description: "A curated list of my favorite anime and their impact on my life.",
+                    icon: "🕹️",
+                    iconBg: "bg-green-300"
+                  }} 
+                  index={4} 
+                />
+              </div>
             </div>
           </motion.div>
         );

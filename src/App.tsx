@@ -444,36 +444,7 @@ export default function App() {
               </div>
             </div>
 
-            {/* 项目卡片区域 */}
-            <div>
-              <h2 className="text-2xl font-black mb-6 flex items-center gap-2">
-                <span className="bg-blue-400 text-white px-3 py-1 border-2 border-black">💻</span>
-                开发项目
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {WORKS.map((work, i) => (
-                  <ProjectCard key={`works-page-${work.id}`} project={work} index={i} />
-                ))}
-                <ProjectCard 
-                  project={{ 
-                    title: "Vibe Player", 
-                    description: "A music player that changes colors based on the album art vibe.",
-                    icon: "🎵",
-                    iconBg: "bg-pink-300"
-                  }} 
-                  index={3} 
-                />
-                <ProjectCard 
-                  project={{ 
-                    title: "O-T-A-K-U Wiki", 
-                    description: "A curated list of my favorite anime and their impact on my life.",
-                    icon: "🕹️",
-                    iconBg: "bg-green-300"
-                  }} 
-                  index={4} 
-                />
-              </div>
-            </div>
+
           </motion.div>
         );
       default:

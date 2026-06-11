@@ -442,6 +442,19 @@ export default function App() {
                   </div>
                 </a>
               </div>
+
+              {/* 更多作品按钮 */}
+              <div className="mt-8 text-center">
+                <a 
+                  href="https://www.youtube.com/@LEEO151515" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-black text-white border-4 border-black px-8 py-4 font-black text-lg shadow-[6px_6px_0_0_rgba(96,165,250,1)] hover:shadow-[8px_8px_0_0_rgba(96,165,250,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all"
+                >
+                  <span>更多作品</span>
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+              </div>
             </div>
 
 

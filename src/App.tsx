@@ -416,15 +416,17 @@ export default function App() {
 
                 {/* Video 4 */}
                 <a 
-                  href="https://youtu.be/YTifF5iZ2N0" 
+                  href="https://youtube.com/shorts/bUWbiY3vWiI?si=YzplXl8dQ1ADvDUR" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-white border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] hover:shadow-[8px_8px_0_0_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all group"
                 >
-                  <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-purple-500 to-pink-500">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-6xl">🚀</span>
-                    </div>
+                  <div className="relative aspect-video overflow-hidden">
+                    <img 
+                      src="https://img.youtube.com/vi/bUWbiY3vWiI/maxresdefault.jpg" 
+                      alt="视频封面"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                    />
                     <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                       <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center border-4 border-white">
                         <Play className="w-8 h-8 text-white ml-1" />
@@ -432,12 +434,12 @@ export default function App() {
                     </div>
                   </div>
                   <div className="p-4">
-                    <h3 className="font-black text-lg mb-2">AI工具让效率翻倍的秘密🚀</h3>
+                    <h3 className="font-black text-lg mb-2">拿命换来的经历，不要相信朋友的朋友</h3>
                     <div className="flex items-center gap-4 text-sm text-gray-600">
                       <span className="flex items-center gap-1">
-                        <Play className="w-4 h-4" /> 5w次播放
+                        <Play className="w-4 h-4" /> 90w次播放
                       </span>
-                      <span>👍 1800</span>
+                      <span>👍 2.3w</span>
                     </div>
                   </div>
                 </a>

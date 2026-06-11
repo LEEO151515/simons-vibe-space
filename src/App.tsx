@@ -317,6 +317,159 @@ export default function App() {
               <h1 className="text-5xl font-black">我的作品</h1>
             </div>
 
+            {/* 账号展示区域 */}
+            <div className="mb-16">
+              <h2 className="text-2xl font-black mb-6 flex items-center gap-2">
+                <span className="bg-purple-500 text-white px-3 py-1 border-2 border-black">👤</span>
+                运营账号
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* 账号1 - YouTube 赵越教授 */}
+                <div className="bg-white border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] p-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-16 h-16 rounded-full border-4 border-black overflow-hidden bg-gray-100 flex-shrink-0">
+                      <img 
+                        src="https://yt3.googleusercontent.com/ytc/placeholder1.jpg" 
+                        alt="赵越教授头像"
+                        className="w-full h-full object-cover"
+                        onError={(e) => { e.currentTarget.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"><rect width="64" height="64" fill="%23f0f0f0"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="24">👤</text></svg>'; }}
+                      />
+                    </div>
+                    <div>
+                      <h3 className="font-black text-lg">赵越教授</h3>
+                      <p className="text-sm text-gray-600">YouTube</p>
+                      <p className="text-sm font-bold">粉丝数: 待更新</p>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <p className="text-sm font-bold text-gray-700">热门视频:</p>
+                    <a href="#" target="_blank" rel="noopener noreferrer" className="block bg-gray-50 border-2 border-black p-3 hover:shadow-[4px_4px_0_0_rgba(0,0,0,1)] transition-all">
+                      <p className="font-bold text-sm mb-1">视频标题1 (待更新)</p>
+                      <div className="flex gap-3 text-xs text-gray-600">
+                        <span>▶ 播放量待更新</span>
+                        <span>👍 点赞待更新</span>
+                      </div>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" className="block bg-gray-50 border-2 border-black p-3 hover:shadow-[4px_4px_0_0_rgba(0,0,0,1)] transition-all">
+                      <p className="font-bold text-sm mb-1">视频标题2 (待更新)</p>
+                      <div className="flex gap-3 text-xs text-gray-600">
+                        <span>▶ 播放量待更新</span>
+                        <span>👍 点赞待更新</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                {/* 账号2 - TikTok @valerraeh8y */}
+                <div className="bg-white border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] p-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-16 h-16 rounded-full border-4 border-black overflow-hidden bg-gray-100 flex-shrink-0">
+                      <img 
+                        src="https://placeholder.com/64x64" 
+                        alt="valerraeh8y头像"
+                        className="w-full h-full object-cover"
+                        onError={(e) => { e.currentTarget.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"><rect width="64" height="64" fill="%23f0f0f0"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="24">👤</text></svg>'; }}
+                      />
+                    </div>
+                    <div>
+                      <h3 className="font-black text-lg">@valerraeh8y</h3>
+                      <p className="text-sm text-gray-600">TikTok</p>
+                      <p className="text-sm font-bold">粉丝数: 待更新</p>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <p className="text-sm font-bold text-gray-700">热门视频:</p>
+                    <a href="#" target="_blank" rel="noopener noreferrer" className="block bg-gray-50 border-2 border-black p-3 hover:shadow-[4px_4px_0_0_rgba(0,0,0,1)] transition-all">
+                      <p className="font-bold text-sm mb-1">视频标题1 (待更新)</p>
+                      <div className="flex gap-3 text-xs text-gray-600">
+                        <span>▶ 播放量待更新</span>
+                        <span>👍 点赞待更新</span>
+                      </div>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" className="block bg-gray-50 border-2 border-black p-3 hover:shadow-[4px_4px_0_0_rgba(0,0,0,1)] transition-all">
+                      <p className="font-bold text-sm mb-1">视频标题2 (待更新)</p>
+                      <div className="flex gap-3 text-xs text-gray-600">
+                        <span>▶ 播放量待更新</span>
+                        <span>👍 点赞待更新</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                {/* 账号3 - TikTok @zenglaozhuan */}
+                <div className="bg-white border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] p-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-16 h-16 rounded-full border-4 border-black overflow-hidden bg-gray-100 flex-shrink-0">
+                      <img 
+                        src="https://placeholder.com/64x64" 
+                        alt="zenglaozhuan头像"
+                        className="w-full h-full object-cover"
+                        onError={(e) => { e.currentTarget.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"><rect width="64" height="64" fill="%23f0f0f0"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="24">👤</text></svg>'; }}
+                      />
+                    </div>
+                    <div>
+                      <h3 className="font-black text-lg">@zenglaozhuan</h3>
+                      <p className="text-sm text-gray-600">TikTok</p>
+                      <p className="text-sm font-bold">粉丝数: 待更新</p>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <p className="text-sm font-bold text-gray-700">热门视频:</p>
+                    <a href="#" target="_blank" rel="noopener noreferrer" className="block bg-gray-50 border-2 border-black p-3 hover:shadow-[4px_4px_0_0_rgba(0,0,0,1)] transition-all">
+                      <p className="font-bold text-sm mb-1">视频标题1 (待更新)</p>
+                      <div className="flex gap-3 text-xs text-gray-600">
+                        <span>▶ 播放量待更新</span>
+                        <span>👍 点赞待更新</span>
+                      </div>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" className="block bg-gray-50 border-2 border-black p-3 hover:shadow-[4px_4px_0_0_rgba(0,0,0,1)] transition-all">
+                      <p className="font-bold text-sm mb-1">视频标题2 (待更新)</p>
+                      <div className="flex gap-3 text-xs text-gray-600">
+                        <span>▶ 播放量待更新</span>
+                        <span>👍 点赞待更新</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                {/* 账号4 - YouTube @zhaoyuejiaoshou (与账号1相同) */}
+                <div className="bg-white border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] p-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-16 h-16 rounded-full border-4 border-black overflow-hidden bg-gray-100 flex-shrink-0">
+                      <img 
+                        src="https://yt3.googleusercontent.com/ytc/placeholder2.jpg" 
+                        alt="赵越教授头像"
+                        className="w-full h-full object-cover"
+                        onError={(e) => { e.currentTarget.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"><rect width="64" height="64" fill="%23f0f0f0"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="24">👤</text></svg>'; }}
+                      />
+                    </div>
+                    <div>
+                      <h3 className="font-black text-lg">赵越教授</h3>
+                      <p className="text-sm text-gray-600">YouTube (@zhaoyuejiaoshou)</p>
+                      <p className="text-sm font-bold">粉丝数: 待更新</p>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <p className="text-sm font-bold text-gray-700">热门视频:</p>
+                    <a href="#" target="_blank" rel="noopener noreferrer" className="block bg-gray-50 border-2 border-black p-3 hover:shadow-[4px_4px_0_0_rgba(0,0,0,1)] transition-all">
+                      <p className="font-bold text-sm mb-1">视频标题1 (待更新)</p>
+                      <div className="flex gap-3 text-xs text-gray-600">
+                        <span>▶ 播放量待更新</span>
+                        <span>👍 点赞待更新</span>
+                      </div>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" className="block bg-gray-50 border-2 border-black p-3 hover:shadow-[4px_4px_0_0_rgba(0,0,0,1)] transition-all">
+                      <p className="font-bold text-sm mb-1">视频标题2 (待更新)</p>
+                      <div className="flex gap-3 text-xs text-gray-600">
+                        <span>▶ 播放量待更新</span>
+                        <span>👍 点赞待更新</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* 视频卡片区域 */}
             <div className="mb-16">
               <h2 className="text-2xl font-black mb-6 flex items-center gap-2">
